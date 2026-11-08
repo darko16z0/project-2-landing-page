@@ -1,0 +1,332 @@
+
+/* =======
+  MAIN STYLE
+======== */
+
+:root {
+  --black: #09090b;
+  --dark-metal: #17171b;
+  --silver: #b9b9c1;
+  --silver-light: #e5e2e5;
+  --silver-dark: #65656d;
+  --wine: #641f30;
+  --red: #ed342d;
+  --bone: #e9e0d2;
+}
+
+/* DARK BACKGROUND */
+
+body {
+  color: var(--bone);
+  background-color: var(--black);
+  background-image:
+    radial-gradient(ellipse at 50% 0%, #401b2b 0%, transparent 50%),
+    repeating-linear-gradient(
+      135deg,
+      #ffffff04 0px,
+      #ffffff04 1px,
+      transparent 1px,
+      transparent 7px
+    );
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* HEADER: DARK  COVER */
+
+.main-header {
+  position: relative;
+  padding: 75px 25px;
+  overflow: hidden;
+  text-align: left;
+  background:
+    linear-gradient(125deg, #08080a 15%, #28141e 65%, #511b2b);
+  border-bottom: 3px solid var(--silver-dark);
+}
+
+.main-header::before {
+  content: "✦ ELITE RECIPE ✦";
+  display: block;
+  margin-bottom: 28px;
+  color: var(--silver);
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 4px;
+}
+
+.page-title {
+  max-width: 900px;
+  font-family: Impact, "Arial Narrow", sans-serif;
+  font-size: clamp(45px, 8vw, 86px);
+  line-height: 0.98;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--silver-light);
+  text-shadow:
+    2px 2px 0 #65656d,
+    4px 4px 0 #35151f;
+}
+
+.intro-text {
+  max-width: 600px;
+  color: #c5b9be;
+  font-size: 16px;
+}
+
+/* SECTION PANELSL */
+
+section {
+  position: relative;
+  margin-bottom: 45px;
+  padding: clamp(22px, 4vw, 42px);
+  background:
+    linear-gradient(145deg, #1c1c20, #101013);
+  border: 1px solid var(--silver-dark);
+  border-radius: 2px;
+  box-shadow:
+    5px 5px 0 #3b1b27,
+    8px 8px 0 #08080a;
+  transition: border-color 0.25s ease,
+              box-shadow 0.25s ease;
+}
+
+section:hover {
+  border-color: var(--silver);
+  box-shadow:
+    5px 5px 0 var(--wine),
+    8px 8px 0 #08080a;
+}
+
+/* HEADINGS: METAL AND DARK */
+
+.section-title {
+  display: table;
+  padding: 5px 10px;
+  color: var(--silver-light);
+  border-bottom: 2px solid var(--red);
+  font-family: Impact, "Arial Narrow", sans-serif;
+  font-size: clamp(29px, 4vw, 42px);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 0 #4c202d;
+}
+
+h3 {
+  color: var(--silver);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* HERO PHOTO: MOODY  */
+
+.hero-image {
+  width: 100%;
+  max-height: 520px;
+  object-fit: cover;
+  border: 2px solid var(--silver-dark);
+  outline: 1px solid #38242b;
+  outline-offset: 4px;
+  filter: saturate(0.72) contrast(1.12);
+  transition: filter 0.3s ease;
+}
+
+.hero-image:hover {
+  filter: saturate(1) contrast(1.08);
+}
+
+.description:first-of-type {
+  color: var(--silver-light);
+  font-size: 19px;
+}
+
+.description,
+.section-text,
+.tip-text,
+.serving-text,
+.side-text {
+  color: #bdb6bb;
+}
+
+/* PHOTOS */
+
+.ingredient-image,
+.cooking-image,
+.cheese-image,
+.serving-image {
+  max-width: 650px;
+  max-height: 390px;
+  margin: 28px auto;
+  object-fit: cover;
+  border: 3px solid var(--bone);
+  box-shadow: 6px 6px 0 var(--wine);
+  filter: saturate(0.8) contrast(1.08);
+  transform: rotate(-1deg);
+  transition: transform 0.25s ease;
+}
+
+.ingredient-image:hover,
+.cooking-image:hover,
+.cheese-image:hover,
+.serving-image:hover {
+  transform: rotate(0deg) scale(1.015);
+}
+
+/* INGREDIENTS */
+
+.ingredient-list {
+  padding-left: 0;
+  list-style: none;
+}
+
+.ingredient-item {
+  margin: 12px 0;
+  padding: 12px 15px;
+  color: var(--bone);
+  background: #202025;
+  border: 1px solid #34343b;
+  border-left: 4px solid var(--silver-dark);
+  transition: border-color 0.2s ease,
+              background 0.2s ease;
+}
+
+.ingredient-item:hover {
+  background: #302027;
+  border-left-color: var(--red);
+}
+
+/* INSTRUCTIONS */
+
+.instruction-list {
+  padding-left: 28px;
+}
+
+.instruction-step {
+  margin: 14px 0;
+  padding-left: 5px;
+  color: #d5ced1;
+}
+
+.instruction-step::marker {
+  color: var(--silver);
+  font-weight: bold;
+}
+
+/*  INSPIRED DETAILS */
+
+.tip-heading,
+.side-heading {
+  color: var(--silver-light);
+  font-family: Impact, "Arial Narrow", sans-serif;
+  font-size: 23px;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 0 var(--wine);
+}
+
+/*  DIVIDERS */
+
+.section-title::after {
+  content: "  ✣";
+  color: var(--silver);
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+}
+
+/* LINK: RED  */
+
+.recipe-link {
+  margin-top: 30px;
+  padding: 18px;
+  background: #191317;
+  border: 1px solid var(--silver-dark);
+  border-left: 5px solid var(--red);
+  box-shadow: 4px 4px 0 #3b1b27;
+}
+
+.recipe-link a {
+  color: #ff7777;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-underline-offset: 4px;
+}
+
+.recipe-link a:hover {
+  color: white;
+  background: transparent;
+}
+
+a:focus {
+  outline: 2px solid var(--silver-light);
+  outline-offset: 4px;
+}
+
+/* FOOTER: SIMPLE */
+
+.main-footer {
+  padding: 40px 20px;
+  background: #070709;
+  border-top: 3px solid var(--silver-dark);
+  text-align: center;
+}
+
+.footer-text:first-child {
+  color: var(--silver-light);
+  font-family: Impact, "Arial Narrow", sans-serif;
+  font-size: 24px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 0 var(--wine);
+}
+
+.footer-text:last-child {
+  color: #89868d;
+  font-size: 12px;
+}
+
+/* ACCESSIBILITY */
+
+a:focus-visible {
+  outline: 3px solid var(--red);
+  outline-offset: 4px;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 600px) {
+  .main-header {
+    padding: 48px 20px;
+  }
+
+  .page-title {
+    font-size: 46px;
+  }
+
+  .main-header::before {
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+
+  main {
+    width: 92%;
+    margin: 30px auto;
+  }
+
+  section {
+    margin-bottom: 30px;
+    padding: 20px;
+    box-shadow: 4px 4px 0 #3b1b27;
+  }
+
+  .section-title {
+    font-size: 30px;
+  }
+}
+
+/*  REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
+}
